@@ -34,10 +34,10 @@ model.add(Dense(10, activation='softmax'))
 
 model.compile(loss=keras.losses.categorical_crossentropy,optimizer=keras.optimizers.Adadelta(),metrics=['accuracy'])
 
-#model.fit(x_train, y_train,batch_size=64,epochs=10,verbose=1,validation_data=(x_test, y_test))
+model.fit(x_train, y_train,batch_size=64,epochs=10,verbose=1,validation_data=(x_test, y_test))
 
-#model.save("rakam_tanima_model")
-model=keras.models.load_model("rakam_tanima_model")
+model.save("rakam_tanima_model")
+#model=keras.models.load_model("rakam_tanima_model")
 
 img=cv2.imread("sekiz.jpg")
 img=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
